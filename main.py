@@ -5,6 +5,8 @@ from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 import project_related
+import projects_decriptions
+import boxes
 
 st.set_page_config(layout='wide')
 
@@ -44,26 +46,12 @@ if selected == 'About':
             st.write("----------")
             skills = ['Python', 'MySql', 'Numpy', 'Pandas', 'Matplotlib', 'Seaborn', 'C++', 'DSA', 'OOPs', 'Streamlit',
                       'Flask', 'Html']
-            # Apply styling for the button-like structure
-            button_style = "background-color: orange; border: none; color: white; padding: 8px 20px; margin: 5px; cursor: pointer;"
 
             # Display the Skills section
             st.title('🔥Skills')
 
             # Display skills buttons in rows
-            current_row = []
-            for skill in skills:
-                button_markup = f'<button style="{button_style}">{skill}</button>'
-                current_row.append(button_markup)
-
-                # Display 3 buttons in a row
-                if len(current_row) == 3:
-                    st.markdown(" ".join(current_row), unsafe_allow_html=True)
-                    current_row = []
-
-            # Display any remaining buttons
-            if current_row:
-                st.markdown(" ".join(current_row), unsafe_allow_html=True)
+            boxes.create_skill_buttons(skills)
 
         with col2:
             with col2:
@@ -135,13 +123,23 @@ if selected == 'Certification':
 
 st.write('----')
 if selected == 'project':
-    with st.container():
-        selected = option_menu(
-            menu_title='select one ',
-            options=['Type1 Project', 'Type1 Project', 'Type3 Project'],
-            icons=['file-code', 'file-code', 'file-code'],
-            orientation='horizontal'
-        )
-    col1,col2 = st.columns
+    project_name = 'Project : IPL API'
+    st.title(project_name)
+
+
+    col1, col2 = st.columns(2)
     with col1:
+
+        # calling project description function
+        subheading_style = "color: #000000; text-decoration: underline;"
+        st.markdown(f"<h4 style='{subheading_style}'>Project Description:</h4>", unsafe_allow_html=True)
+        projects_decriptions.ipl_api()
+
+
+
+
+    with col2:
+        stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'Kaggle']
+
+        boxes.create_skill_buttons(stack)
         project_related.main()

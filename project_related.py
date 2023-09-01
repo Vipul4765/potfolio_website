@@ -1,60 +1,104 @@
-# github_directory_viewer.py
-
 import streamlit as st
 import requests
+import pandas as pd
+from IPython.display import HTML
+import plotly.graph_objects as go
+
 
 def fetch_github_directory(repo_name):
-    base_url = f"https://api.github.com/repos/{repo_name}/contents/"
-    response = requests.get(base_url)
-    return response.json()
+    try:
+        base_url = f"https://api.github.com/repos/{repo_name}/contents/"
+        response = requests.get(base_url)
+        response.raise_for_status()  # Check for HTTP request errors
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        st.error(f"Error fetching repository contents: {e}")
+        return None
+
+
+def get_file_type(file_name):
+    # Extract the file extension
+    file_extension = file_name.split('.')[-1]
+
+    # If the extension is empty, return 'Other'
+    if not file_extension:
+        return 'Other'
+
+    # Otherwise, return the extension with .dot
+    return f".{file_extension}"
+
 
 def main():
-    st.title("GitHub Directory Viewer")
-
+    st.subheader("GitHub Directory Viewer")
+    st.write('Github link of Ipl Api')
+    st.markdown('https://github.com/Vipul4765/ipl-api-service')
     # Input fields
     repo_name = st.text_input("GitHub Repository Name", "Vipul4765/ipl-api-service")
-
+    st.write('Click on Load Repository if want to load here ')
     if st.button("Load Repository"):
+
         if repo_name:
             contents = fetch_github_directory(repo_name)
             if isinstance(contents, list):
                 st.write(f"Contents of '{repo_name}' repository:")
 
-                # Separate .py files and other files
-                py_files = []
-                other_files = []
+                # Create a list of clickable links
+                URL = [f"https://raw.githubusercontent.com/{repo_name}/master/{item['name']}" for item in contents]
 
-                for item in contents:
-                    if item['type'] == 'file':
-                        if item['name'].endswith('.py'):
-                            py_files.append(item)
-                        else:
-                            other_files.append(item)
+                # Create a new DataFrame with file details, types, and links
+                df = pd.DataFrame({
+                    "File Name": [item['name'] for item in contents],
+                    "File Type": [get_file_type(item['name']) for item in contents]
+                })
+                df['URL'] = URL
 
-                # Create two columns
-                col1, col2 = st.columns(2)
+                st.data_editor(
+                    df,
+                    column_config={
+                        "URL": st.column_config.LinkColumn("File Link")
+                    },
+                    hide_index=True,
+                )
 
-                # Display directory files with buttons in the first column
-                with col1:
-                    st.write("Directory Files:")
-                    for item in py_files:
-                        if st.button(f"Show Code for {item['name']}"):
-                            pass  # Add code to display .py file content here
+                #df['Link'] = [create_link(url) for url in URL]
 
-                # Display a message or content for other files in the second column
-                with col2:
-                    st.write("Other Files:")
-                    for item in other_files:
-                        st.write(f"Other File: {item['name']}")
-                        st.write("This is my project")
+                # Dataframe as a plotly table
+
+                '''fig = go.Figure(
+                    data=[
+                        go.Table(
+                            columnwidth=[1, 0.3, 1],
+                            header=dict(
+                                values=[f"<b>{i}</b>" for i in df.columns.to_list()],
+                                fill_color='pink'
+                            ),
+                            cells=dict(
+                                values=df.transpose()
+                            )
+                        )
+                    ]
+                )
+                st.plotly_chart(fig, use_container_width=True)'''
+
+
+
+
 
             else:
-                st.error("Failed to fetch repository contents. Check your repository name.")
+                st.error(f"Failed to fetch repository contents for '{repo_name}'. Check your repository name.")
         else:
             st.warning("Please enter a valid GitHub repository name.")
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
 
 
 
