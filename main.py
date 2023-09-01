@@ -7,8 +7,10 @@ from streamlit_lottie import st_lottie
 import project_related
 import projects_decriptions
 import boxes
+import contact_info
 
 st.set_page_config(layout='wide')
+
 
 
 def load_lottie1(url):
@@ -143,3 +145,5 @@ if selected == 'project':
 
         boxes.create_skill_buttons(stack)
         project_related.main()
+if selected == 'Contact':
+    contact_info.create_streamlit_content()
