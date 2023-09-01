@@ -4,6 +4,7 @@ from streamlit.runtime.state import widgets
 from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
+import project_related
 
 st.set_page_config(layout='wide')
 
@@ -141,6 +142,6 @@ if selected == 'project':
             icons=['file-code', 'file-code', 'file-code'],
             orientation='horizontal'
         )
-    col1, col2 = st.columns(2)
+    col1,col2 = st.columns
     with col1:
-        st.write('vipul')
+        project_related.main()
