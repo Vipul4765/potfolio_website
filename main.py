@@ -1,7 +1,13 @@
+import sys
+
+sys.path.insert(1, "C:/Users/DELL/PycharmProjects/potfolio_website/streamlit_option_menu")
+from streamlit_option_menu import option_menu
+
 import streamlit as st
 import pandas as pd
+
 from streamlit.runtime.state import widgets
-from streamlit_option_menu import option_menu
+
 import requests
 from streamlit_lottie import st_lottie
 import project_related
@@ -148,4 +154,4 @@ if selected == 'project':
 if selected == 'Contact':
     contact_info.create_streamlit_content()
 
-#hello
+#hellostream
