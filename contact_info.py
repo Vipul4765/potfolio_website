@@ -12,7 +12,7 @@ def create_streamlit_content():
 
     st.header('Vipul Kumar, B.Tech')
 
-    st.info('Python developer, data Analytics with an interest in Data Science')
+    st.info('Python developer, data Analytics with a deep interest in Data Science')
 
     icon_size = 20
 
