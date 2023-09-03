@@ -1,7 +1,7 @@
 import sys
 
 # Insert the absolute path of streamlit_option_menu
-sys.path.insert(1, r'C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\streamlit_option_menu-0.3.6.dist-info')
+sys.path.insert(1, r'C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\streamlit_option_menu')
 
 # Now you can import option_menu
 from streamlit_option_menu import option_menu
