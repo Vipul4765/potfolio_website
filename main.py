@@ -1,18 +1,9 @@
-import sys
-
-# Insert the absolute path of streamlit_option_menu
-sys.path.insert(1, r'C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\site-packages\streamlit_option_menu')
 
 # Now you can import option_menu
 from streamlit_option_menu import option_menu
-
-
-
 import streamlit as st
 import pandas as pd
-
 from streamlit.runtime.state import widgets
-
 import requests
 from streamlit_lottie import st_lottie
 import project_related
