@@ -16,6 +16,7 @@ st.set_page_config(layout='wide', page_title="My Portfolio Website", page_icon="
 
 
 
+
 def load_lottie1(url):
     r = requests.get(url)
     if r.status_code != 200:
@@ -151,4 +152,5 @@ if selected == 'project':
 if selected == 'Contact':
     contact_info.create_streamlit_content()
 
-#hellostream
+
+
