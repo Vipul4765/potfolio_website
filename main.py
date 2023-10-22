@@ -50,8 +50,8 @@ if selected == 'About':
             approaching challenges with a detail-oriented and solution-driven mindset. I navigate the 
             dynamic world of data, consistently seeking innovative ways to contribute and grow.""")
             st.write("----------")
-            skills = ['Python', 'MySql', 'Numpy', 'Pandas', 'Matplotlib', 'Seaborn', 'C++', 'DSA', 'OOPs', 'Streamlit',
-                      'Flask', 'Html']
+            skills = ['Python', 'MySql', 'Numpy', 'C++', 'Pandas', 'Seaborn', 'Matplotlib', 'DSA', 'OOPs', 'Streamlit',
+                      'Flask', 'Html', 'Git', 'Github', 'Machine Learning', 'Backend Developer', 'RestApi', 'Tableau']
 
             # Display the Skills section
             st.title('🔥Skills')
@@ -104,19 +104,21 @@ if selected == 'Certification':
     with col1:
         with st.container():
             selected = option_menu(
-                menu_title="Please choose from the options below and click to view the awarded certificate",
-                options=['Python', 'DSA', 'Data Analysis', 'Pandas', 'OOPs'],
-                icons=['code-square', 'code-square', 'code-square', 'code-square', 'code-square'],
+                menu_title="click to view the awarded certificate",
+                options=['Python', 'DSA', 'Mysql Beginner', 'MySql Intermediate', 'Data Analysis', 'Pandas', 'OOPs'],
+                icons=['code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square'],
             )
 
         if selected == 'Python':
             with col2:
                 st.image('CN_Certificate_914cbfc05b28dfd9 (1)_page-0001.jpg', caption='Coding Ninjas Certificate',
                          use_column_width=True)
+                st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://ninjasfiles.s3.amazonaws.com/certificate275017976f6c891eb495cdbfa5db8745b992116.pdf)')
 
         if selected == 'DSA':
             with col2:
-                st.image('NPTEL DSA_page-0001.jpg')
+                st.image('NPTEL DSA_page-0001.jpg', caption = 'NPTEL Certificate')
+                st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://drive.google.com/file/d/1m7J5pY9VGkKaS6RUgXlBg-MbEjPPlrCN/view)')
         if selected == 'Data Analysis':
             with col2:
                 st.image('Data Analysis_page-0001.jpg')
@@ -127,8 +129,34 @@ if selected == 'Certification':
             with col2:
                 st.write('no available yet')
 
+        st.write(
+            f'<style>div.stButton > button:first-child {{ position: fixed; top: 0; right: 0; }}</style>',
+            unsafe_allow_html=True
+        )
+
+        if selected == 'Mysql Beginner':
+            with col2:
+                st.image('sql_basic certificate_page-0001.jpg', caption="Vipul Kumar's HackerRank Certificates")
+                st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://www.hackerrank.com/certificates/4fefbc6b8162)')
+
+        if selected == 'MySql Intermediate':
+            with col2:
+                st.image('sql_intermediate certificate_page-0001.jpg', caption= "Vipul Kumar's HackerRank Certificates")
+                st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://www.hackerrank.com/certificates/7781b740714d)')
+
+
 st.write('----')
 if selected == 'project':
+    col1, col2 = st.columns(2)
+    with col1:
+        with st.container():
+            selected = option_menu(
+                menu_title=None,
+                options=['Project : IPL API', 'Inshort News Clone', 'Using Tableau', 'Face Detection', 'Flight Dashboard', 'My NLP APP ', 'My Porfolio Website'],
+                icons=['code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash','code-slash'],
+
+
+            )
     project_name = 'Project : IPL API'
     st.title(project_name)
 
