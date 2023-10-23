@@ -16,7 +16,6 @@ st.set_page_config(layout='wide', page_title="My Portfolio Website", page_icon="
 
 
 
-
 def load_lottie1(url):
     r = requests.get(url)
     if r.status_code != 200:
@@ -105,8 +104,8 @@ if selected == 'Certification':
         with st.container():
             selected = option_menu(
                 menu_title="click to view the awarded certificate",
-                options=['Python', 'DSA', 'Mysql Beginner', 'MySql Intermediate', 'Data Analysis', 'Pandas', 'OOPs'],
-                icons=['code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square'],
+                options=['Python', 'DSA', 'Mysql Beginner', 'MySql Intermediate', 'Problem Solving Basic Certificate' ,'Problem Solving Intermediate Certificate' ,'Data Analysis', 'Pandas', 'OOPs'],
+                icons=['code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square'],
             )
 
         if selected == 'Python':
@@ -144,6 +143,15 @@ if selected == 'Certification':
                 st.image('sql_intermediate certificate_page-0001.jpg', caption= "Vipul Kumar's HackerRank Certificates")
                 st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://www.hackerrank.com/certificates/7781b740714d)')
 
+        if selected == 'Problem Solving Basic Certificate':
+            with col2:
+                st.image('problem_solving_basic certificate_page-0001.jpg', caption= "Vipul Kumar's HackerRank Certificates")
+                st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://www.hackerrank.com/certificates/0d2f352f87e0)')
+
+        if selected == 'Problem Solving Intermediate Certificate':
+            with col2:
+                st.image('problem_solving_intermediate certificate_page-0001.jpg', caption="Vipul Kumar's HackerRank Certificates")
+                st.markdown('------------------------------------------------------------------------------------------Verify at : [link](https://www.hackerrank.com/certificates/bb46e0b2d12d)')
 
 st.write('----')
 if selected == 'project':
