@@ -1,5 +1,5 @@
 
-# Now you can import option_menu
+# Now you can import option_menu # This is ready
 from streamlit_option_menu import option_menu
 import streamlit as st
 import pandas as pd
