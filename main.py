@@ -1,4 +1,4 @@
-
+import streamlit
 # Now you can import option_menu # This is ready
 from streamlit_option_menu import option_menu
 import streamlit as st
@@ -165,26 +165,65 @@ if selected == 'project':
 
 
             )
-    project_name = 'Project : IPL API'
-    st.title(project_name)
+    if selected == 'Project : IPL API':
+        project_name = 'Project : IPL API'
+        st.title(project_name)
 
 
-    col1, col2 = st.columns(2)
-    with col1:
+        col1, col2 = st.columns(2)
+        with col1:
 
-        # calling project description function
-        subheading_style = "color: #000000; text-decoration: underline;"
-        st.markdown(f"<h4 style='{subheading_style}'>Project Description:</h4>", unsafe_allow_html=True)
-        projects_decriptions.ipl_api()
-
-
+            # calling project description function
+            subheading_style = "color: #000000; text-decoration: underline;"
+            st.markdown(f"<h4 style='{subheading_style}'>Project Description:</h4>", unsafe_allow_html=True)
+            projects_decriptions.ipl_api()
 
 
-    with col2:
-        stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'Kaggle']
 
-        boxes.create_skill_buttons(stack)
-        project_related.main()
+
+        with col2:
+            stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'Kaggle']
+
+            boxes.create_skill_buttons(stack)
+            project_related.main()
+
+    if selected == 'Using Tableau':
+        with col2:
+            st.header('IPL DASHBOARD')
+            stack = ['Tableau', 'Data Analysis', 'MySQL']
+            boxes.create_skill_buttons(stack)
+            st.subheader('About Project')
+            st.write('📊 Explore the IPL like never before! My Tableau IPL data project is now live, offering dynamic data trends at your fingertips. Dive into cricket insights with the power to choose.')
+            st.markdown(
+                '- [Click here for Tableau DashBoard](https://public.tableau.com/app/profile/vipul.kumar2288/viz/12thMan/Story1)')
+        col3, col4 = st.columns(2)
+        with col3:
+            col1,col2 = st.columns(2)
+            with col1:
+                st.image('Overall_tableau.png')
+            with col2:
+                st.image('Batsman_tableau.png')
+            col3, col45, col5 = st.columns(3)
+            with col3:
+                st.image('Bowler_tableau.png')
+            with col45:
+                st.image('Bats_vs_Bow_tableau.png')
+            with col5:
+                st.image('Bats_vs_Bowler_tableau.png')
+        with col4:
+                st.write('In story there are five dashboard :-')
+                st.write('''1.Overall  
+                            2.Batsmen  
+                            3.Bowlers  
+                            4.Batsmen vs. Bowlers  
+                            5.Batsmen vs. Stadium''')
+                st.write('📈Key Features:-')
+                st.write('- Customize your analysis by selecting players, teams, or seasons  ')
+                st.write('- Interactive dashboards for hands-on data exploration')
+                st.write('- In-depth coverage of multiple IPL seasons')
+                st.markdown('- [Video Link To see Project](https://www.loom.com/share/da892138440f4cb7aa108ba68915710e?sid=dd779a16-8a6e-46d9-9cd6-dad64564ec3c)')
+
+
 if selected == 'Contact':
     contact_info.create_streamlit_content()
 
