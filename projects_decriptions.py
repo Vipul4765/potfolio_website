@@ -15,7 +15,7 @@ def display_project_description( project_overview, challenges, key_takeaways, ke
     skills_and_expertise (str): Skills and expertise gained during the project.
     """
     # Apply blue color to subheadings
-    subheading_style = "color: #0074D9;"
+    subheading_style = "color: #0080ff;"
     st.markdown(f"<h5 style='{subheading_style}'>Project Overview:</h5>", unsafe_allow_html=True)
     st.write(project_overview)
 
@@ -41,7 +41,7 @@ def display_project_description( project_overview, challenges, key_takeaways, ke
 def ipl_api():
     display_project_description(
 
-        project_overview="I built an IPL API that provides real data about the Indian Premier League.",
+        project_overview="I built an 12TH MAN API that provides real data about the Indian Premier League.",
         challenges="The biggest challenge was Manipulating the data .",
         key_takeaways="I learned a lot about Python, Flask, Numpy and Pandas during this project.",
         keywords="IPL, API, Python, Flask, Pandas, Numpy, cricket, data science",

@@ -160,31 +160,54 @@ if selected == 'project':
         with st.container():
             selected = option_menu(
                 menu_title=None,
-                options=['Project : IPL API', 'Inshort News Clone', 'Using Tableau', 'Face Detection', 'Flight Dashboard', 'My NLP APP ', 'My Porfolio Website'],
+                options=['12TH MAN', 'Inshort News Clone', 'Using Tableau', 'Face Detection', 'Flight Dashboard', 'My NLP APP ', 'My Porfolio Website'],
                 icons=['code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash','code-slash'],
 
 
             )
-    if selected == 'Project : IPL API':
-        project_name = 'Project : IPL API'
-        st.title(project_name)
 
+    if selected == 'Inshort News Clone':
+        with col2:
+            st.title('Inshort News Clone')
+            stack = ['Python', 'Tkinter', 'API Integration', 'Request Library', 'webbrowser', 'PIL']
+            boxes.create_skill_buttons(stack)
+            st.write("I'm a Python developer who created 'Mera News App,' a user-friendly news application. It provides real-time news updates with images, headlines, and descriptions. Stay informed and explore the world's latest news with ease")
+            st.markdown('- [Githhub Respository](https://github.com/Vipul4765/inshort-news-application.git)')
+        col34, col35 = st.columns(2)
+        with col34:
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image('Insort1.png')
+            with col2:
+                st.image('Insort2.png')
+        with col35:
+            st.write('📈Key Features:-')
+            st.write("- Live News: Get real-time news updates from various sources.")
+            st.write("- Live News: Get real-time news updates from various sources.")
+            st.write("- Live News: Get real-time news updates from various sources.")
+            st.write("- User-Friendly: The app provides a clean and intuitive user interface.")
 
-        col1, col2 = st.columns(2)
-        with col1:
+    if selected == '12TH MAN':
+        with col2:
+            project_name = '12TH MAN'
+            st.title(project_name)
+            stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'MySQL', 'API Development', 'Backened Dev', 'API Testing']
+            boxes.create_skill_buttons(stack)
+            st.markdown("- [Github Respository](https://github.com/Vipul4765/ipl-api-service)")
+        col34, col35 = st.columns(2)
+        with col35:
 
             # calling project description function
             subheading_style = "color: #000000; text-decoration: underline;"
-            st.markdown(f"<h4 style='{subheading_style}'>Project Description:</h4>", unsafe_allow_html=True)
             projects_decriptions.ipl_api()
 
 
 
 
-        with col2:
-            stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'Kaggle']
 
-            boxes.create_skill_buttons(stack)
+
+
+
             project_related.main()
 
     if selected == 'Using Tableau':

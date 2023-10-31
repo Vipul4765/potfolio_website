@@ -17,7 +17,7 @@ def create_skill_buttons(skills, buttons_per_row=3):
         "border: 2px solid black; "
         "color: white; "
         "width: 150px; "
-        "height: 40px; "
+        "height: 35px; "
         "margin: 5px; "
         "cursor: pointer;"
     )

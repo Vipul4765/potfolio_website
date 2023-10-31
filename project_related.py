@@ -1,8 +1,7 @@
 import streamlit as st
 import requests
 import pandas as pd
-from IPython.display import HTML
-import plotly.graph_objects as go
+
 
 
 def fetch_github_directory(repo_name):
@@ -29,9 +28,6 @@ def get_file_type(file_name):
 
 
 def main():
-    st.subheader("GitHub Directory Viewer")
-    st.write('Github link of Ipl Api')
-    st.markdown('https://github.com/Vipul4765/ipl-api-service')
     # Input fields
     repo_name = st.text_input("GitHub Repository Name", "Vipul4765/ipl-api-service")
     st.write('Click on Load Repository if want to load here ')
