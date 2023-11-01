@@ -190,16 +190,17 @@ if selected == 'project':
     if selected == '12TH MAN':
         with col2:
             project_name = '12TH MAN'
-            st.title(project_name)
+            st.subheader(project_name)
             stack = ['Flask', 'Python', 'Pandas', 'Numpy', 'Data Analysis', 'MySQL', 'API Development', 'Backened Dev', 'API Testing']
             boxes.create_skill_buttons(stack)
+            st.write('Introducing 12TH MAN IPL API Service—a treasure trove of cricket data! You can use my API to build your fantastic app, enhance your cricket website, or simply explore cricket data.')
             st.markdown("- [Github Respository](https://github.com/Vipul4765/ipl-api-service)")
         col34, col35 = st.columns(2)
         with col35:
 
             # calling project description function
             subheading_style = "color: #000000; text-decoration: underline;"
-            projects_decriptions.ipl_api()
+            projects_decriptions.display_project_description()
 
 
 
