@@ -124,9 +124,7 @@ if selected == 'Certification':
         if selected == 'Pandas':
             with col2:
                 st.image('Pandas_page-0001.jpg')
-        if selected == 'OOPs':
-            with col2:
-                st.write('no available yet')
+
 
         st.write(
             f'<style>div.stButton > button:first-child {{ position: fixed; top: 0; right: 0; }}</style>',
