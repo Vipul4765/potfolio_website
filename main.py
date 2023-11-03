@@ -104,7 +104,7 @@ if selected == 'Certification':
         with st.container():
             selected = option_menu(
                 menu_title="click to view the awarded certificate",
-                options=['Python', 'DSA', 'Mysql Beginner', 'MySql Intermediate', 'Problem Solving Basic Certificate' ,'Problem Solving Intermediate Certificate' ,'Data Analysis', 'Pandas', 'OOPs'],
+                options=['Python', 'DSA', 'Mysql Beginner', 'MySql Intermediate', 'Problem Solving Basic Certificate' ,'Problem Solving Intermediate Certificate' ,'Data Analysis', 'Pandas'],
                 icons=['code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square', 'code-square'],
             )
 
