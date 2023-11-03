@@ -158,14 +158,28 @@ if selected == 'project':
         with st.container():
             selected = option_menu(
                 menu_title=None,
-                options=['12TH MAN', 'Inshort News Clone', 'Using Tableau', 'Face Detection', 'Flight Dashboard', 'My NLP APP ', 'My Porfolio Website'],
+                options=['12TH MAN', 'Inshort News Clone', 'Using Tableau', 'Face Detection', 'Flight Dashboard', 'My NLP APP', 'My Porfolio Website'],
                 icons=['code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash','code-slash'],
 
 
             )
     if selected == 'Face Detection':
         with col2:
-            st.write('Update Soon')
+            st.write('update soon')
+
+    if selected == 'My NLP APP':
+        with col2:
+            st.subheader('Face Detection')
+            stack = ['Python', 'Api Integration', 'GUI', 'NLP']
+            boxes.create_skill_buttons(stack)
+            st.write(
+                "I leverage advanced Natural Language Processing (NLP) techniques and APIs for sentiment analysis, NER, and emotion detection in text. My projects involve harnessing the power of AI to understand and interpret human language, providing valuable insights into people's feelings and sentiments")
+            st.write('📈Key Features:-')
+            st.write('- 📚 Proficient in Natural Language Processing (NLP) techniques.')
+            st.write(
+                '- 🧬 Utilize APIs for sentiment analysis, Named Entity Recognition (NER), and emotion detection in text.')
+            st.write("- 📊 Provide valuable insights into people's feelings and sentiments through text analysis.")
+            st.markdown('- [Githhub Respository](https://github.com/Vipul4765/nlppython)')
     if selected == 'Flight Dashboard':
         with col2:
             st.write('Update Soon')
