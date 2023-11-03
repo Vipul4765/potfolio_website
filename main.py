@@ -163,6 +163,24 @@ if selected == 'project':
 
 
             )
+
+    if selected == 'My Porfolio Website':
+        with col2:
+            st.subheader('My Porfolio Website')
+            stack = ['Python', 'Streamlit', 'Hosting']
+            boxes.create_skill_buttons(stack)
+            st.write('#')
+            st.write('📈Key Features:-')
+            st.write("- 🚀 As a developer, I've harnessed the power of Streamlit to create my own dynamic portfolio website. 🌐")
+            st.write("- 💼 On my site, you'll find a collection of my projects and experience neatly organized for easy navigation. Explore my Projects section to see my work in action.")
+            st.write("- 🎓 I'm committed to lifelong learning and have earned several certificates in the tech industry. Head over to my Certificates section to see my qualifications.")
+            st.write("- 📈 With interactive charts and visuals, I've made it simpler for visitors to understand my work and skills.")
+
+            st.write("- 👉 [Check it out here](https://mainpy-kvjdrm8gh65vqodkzoueyb.streamlit.app/).")
+
+            st.write("- 🤝 I'm always looking to connect with fellow professionals, so please feel free to send me a connection request.")
+            st.write("- 📌 Let's explore opportunities and collaborations together!")
+
     if selected == 'Face Detection':
         with col2:
             st.write('update soon')
@@ -265,6 +283,8 @@ if selected == 'project':
                 st.write('- Interactive dashboards for hands-on data exploration')
                 st.write('- In-depth coverage of multiple IPL seasons')
                 st.markdown('- [Video Link To see Project](https://www.loom.com/share/da892138440f4cb7aa108ba68915710e?sid=dd779a16-8a6e-46d9-9cd6-dad64564ec3c)')
+
+
 
 
 if selected == 'Contact':
