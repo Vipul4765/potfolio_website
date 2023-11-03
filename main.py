@@ -203,7 +203,7 @@ if selected == 'project':
 
     if selected == 'My NLP APP':
         with col2:
-            st.subheader('Face Detection')
+            st.subheader('My NLP APP')
             stack = ['Python', 'Api Integration', 'GUI', 'NLP']
             boxes.create_skill_buttons(stack)
             st.write(
