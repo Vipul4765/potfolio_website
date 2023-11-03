@@ -173,6 +173,21 @@ if selected == 'project':
             st.write('📈Key Features:-')
             st.write("- 🚀 As a developer, I've harnessed the power of Streamlit to create my own dynamic portfolio website. 🌐")
             st.write("- 💼 On my site, you'll find a collection of my projects and experience neatly organized for easy navigation. Explore my Projects section to see my work in action.")
+
+        col34, col35 = st.columns(2)
+        with col34:
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.image('Portfolio1.png')
+            with col2:
+                st.image('portfolio2.png')
+            with col3:
+                st.image("portfolio3.png")
+            with col4:
+                st.image('portfolio4.png')
+
+
+        with col35:
             st.write("- 🎓 I'm committed to lifelong learning and have earned several certificates in the tech industry. Head over to my Certificates section to see my qualifications.")
             st.write("- 📈 With interactive charts and visuals, I've made it simpler for visitors to understand my work and skills.")
 
@@ -194,8 +209,7 @@ if selected == 'project':
                 "I leverage advanced Natural Language Processing (NLP) techniques and APIs for sentiment analysis, NER, and emotion detection in text. My projects involve harnessing the power of AI to understand and interpret human language, providing valuable insights into people's feelings and sentiments")
             st.write('📈Key Features:-')
             st.write('- 📚 Proficient in Natural Language Processing (NLP) techniques.')
-            st.write(
-                '- 🧬 Utilize APIs for sentiment analysis, Named Entity Recognition (NER), and emotion detection in text.')
+            st.write('- 🧬 Utilize APIs for sentiment analysis, Named Entity Recognition (NER), and emotion detection in text.')
             st.write("- 📊 Provide valuable insights into people's feelings and sentiments through text analysis.")
             st.markdown('- [Githhub Respository](https://github.com/Vipul4765/nlppython)')
     if selected == 'Flight Dashboard':
