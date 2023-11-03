@@ -158,7 +158,7 @@ if selected == 'project':
         with st.container():
             selected = option_menu(
                 menu_title=None,
-                options=['12TH MAN', 'Inshort News Clone', 'Using Tableau', 'Face Detection', 'Flight Dashboard', 'My NLP APP', 'My Porfolio Website'],
+                options=['12TH MAN', 'Inshort News Clone', 'Using Tableau', 'My NLP APP', 'My Porfolio Website', 'Face Detection', 'Flight Dashboard'],
                 icons=['code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash', 'code-slash','code-slash'],
 
 
@@ -176,11 +176,12 @@ if selected == 'project':
 
         col34, col35 = st.columns(2)
         with col34:
-            col1, col2, col3, col4 = st.columns(4)
+            col1, col2= st.columns(2)
             with col1:
                 st.image('Portfolio1.png')
             with col2:
                 st.image('portfolio2.png')
+            col3, col4 = st.columns(2)
             with col3:
                 st.image("portfolio3.png")
             with col4:
