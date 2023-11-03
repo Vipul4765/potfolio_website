@@ -165,6 +165,13 @@ if selected == 'project':
 
 
             )
+    if selected == 'Face Detection':
+        with col2:
+            st.write('Update Soon')
+    if selected == 'Flight Dashboard':
+        with col2:
+            st.write('Update Soon')
+
 
     if selected == 'Inshort News Clone':
         with col2:
