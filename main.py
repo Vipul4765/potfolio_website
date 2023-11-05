@@ -49,14 +49,24 @@ if selected == 'About':
             approaching challenges with a detail-oriented and solution-driven mindset. I navigate the 
             dynamic world of data, consistently seeking innovative ways to contribute and grow.""")
             st.write("----------")
-            skills = ['Python', 'MySql', 'Numpy', 'C++', 'Pandas', 'Seaborn', 'Matplotlib', 'DSA', 'OOPs', 'Streamlit',
-                      'Flask', 'Html', 'Git', 'Github', 'Machine Learning', 'Backend Developer', 'RestApi', 'Tableau']
 
-            # Display the Skills section
-            st.title('🔥Skills')
 
+            # List of technologies
+            #tech1
+            st.header('💼SKILLS')
+            st.code(
+                """
+                'Python🐍   SQL🐬   C++🖥️   HTML🌐'
+                'Numpy🧮   Pandas🐼   Matplotlib📈   Seaborn📊'
+                'DSA📚   OOPs🧪   Git🐙   Github🐙'
+                'Streamlit🔮   Flask🌐   Tableau📊'
+                'Machine Learning 🤖   Backened Developer💼   RestApi🌐'
+                
+                """
+
+            )
             # Display skills buttons in rows
-            boxes.create_skill_buttons(skills)
+            #boxes.create_skill_buttons(skills)
 
         with col2:
             with col2:
